@@ -20,7 +20,9 @@ $db = $database->connect();
 
 $post = new Post($db);
 
-$post->readPosts();
+$data = $post->readPosts();
+
+
 
 // If there is posts in database.
 

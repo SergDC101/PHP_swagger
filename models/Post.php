@@ -40,7 +40,7 @@ class Post{
             FROM '.$this->table.' posts LEFT JOIN
             category ON posts.category_id = category.id
             ORDER BY
-            posts.created_at DESC
+             posts.created_at DESC
         ';
 
         $post = $this->connection->prepare($query);
