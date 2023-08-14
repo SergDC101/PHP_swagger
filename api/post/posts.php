@@ -34,9 +34,17 @@ if($data->rowCount())
 
     while($row = $data->fetch(PDO::FETCH_OBJ))
     {
-        print_r($row);
+        $posts[$row->id] = [
+            'id' => $row->id,
+            'categoryName' => $row->category,
+            'description' => $row->description,
+            'title' => $row->title,
+            'created_at' => $row->created_at,
+        ];
 
     }
+
+    echo json_encode($posts);
 
 }
 else
